@@ -1,5 +1,5 @@
 # Deepracer_IndoorSlam_LaserScan_Gmapping
-Indoor SLAM of deepracer without IMU using Laser Scan matcher and Gmapping. This repository uses only Lidar data (on /scan topic) to perform SLAM.
+Indoor 2D SLAM of deepracer without IMU using Laser Scan matcher and Gmapping. This repository uses only Lidar data (on /scan topic) to perform SLAM.
 
 ## To get started : 
 1. To launch the SLAM on an indoor bagfile data : ```roslaunch laser_scan_matcher deepracer_gmapping_slam.launch```<br/>
