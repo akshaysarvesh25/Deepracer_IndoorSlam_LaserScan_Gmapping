@@ -1,0 +1,15 @@
+<launch>
+
+  <node pkg="laser_scan_matcher" type="laser_scan_matcher_node" 
+    name="laser_scan_matcher_node" output="screen">
+    <param name="fixed_frame" value = "odom"/>
+    <param name="use_alpha_beta" value="true"/>
+    <param name="max_iterations" value="10"/>
+  </node>
+
+  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
+    <param name="map_udpate_interval" value="1.0"/>
+    <param name="delta" value="0.02"/>
+  </node>
+
+</launch>
