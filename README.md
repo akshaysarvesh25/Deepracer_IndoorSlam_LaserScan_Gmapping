@@ -3,8 +3,8 @@ Indoor 2D SLAM of deepracer without IMU using Laser Scan matcher and Gmapping. T
 
 ## To get started : 
 1. To launch the SLAM on an indoor bagfile data : ```roslaunch laser_scan_matcher deepracer_gmapping_slam.launch```<br/>
-2. Edit and add new bagfiles in the /demo/ directory ```roscd laser_scan_matcher/demo/ ```
-
+2. Edit and add new bagfiles in the /demo/ directory ```roscd laser_scan_matcher/demo/ ```<br/>
+3. Edit the name of the bagfile in the deepracer_gmapping_slam.launch file.
 
 ## Useful links :
 Laser Scan matcher link : https://github.com/ccny-ros-pkg/scan_tools<br/>
