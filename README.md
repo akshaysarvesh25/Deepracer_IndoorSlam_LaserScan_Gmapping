@@ -10,3 +10,6 @@ Indoor 2D SLAM of deepracer without IMU using Laser Scan matcher and Gmapping. T
 Laser Scan matcher link : https://github.com/ccny-ros-pkg/scan_tools<br/>
 Gmapping link : https://github.com/ros-perception/slam_gmapping <br/>
 Control Deepracer with a joystick : https://github.com/athackst/deepracer_joy
+
+## Screengrab video of the example bagfile : </br>
+https://youtu.be/XpO7LHqvnnk
