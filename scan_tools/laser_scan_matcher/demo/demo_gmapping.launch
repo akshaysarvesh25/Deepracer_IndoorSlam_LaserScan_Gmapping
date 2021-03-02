@@ -7,10 +7,10 @@ slam_gmapping
 
   #### set up data playback from bag #############################
 
-  <param name="/use_sim_time" value="true"/>
+  <param name="/use_sim_time" value="false"/>
 
-  <node pkg="rosbag" type="play" name="play" 
-    args="$(find laser_scan_matcher)/demo/demo.bag --delay=5 --clock"/>
+<!--   <node pkg="rosbag" type="play" name="play" 
+    args="$(find laser_scan_matcher)/demo/demo.bag --delay=5 --clock"/> -->
 
   #### publish an example base_link -> laser transform ###########
 
