@@ -4,13 +4,17 @@ slam_gmapping
 -->
 
 <launch>
+  <env name="ROSCONSOLE_CONFIG_FILE"
+	value="$(find laser_scan_matcher)/custom_console.config"/>
 
   #### set up data playback from bag #############################
 
-  <param name="/use_sim_time" value="true"/>
+  <param name="/use_sim_time" value="false"/>
 
-  <node pkg="rosbag" type="play" name="play" 
-    args="$(find laser_scan_matcher)/demo/demo.bag --delay=5 --clock"/>
+  #### start publishing path from pose data #############################
+
+  node pkg="path_node" type="nav_path.py" 
+    name="nav_path.py" output="screen">
 
   #### publish an example base_link -> laser transform ###########
 
@@ -20,7 +24,8 @@ slam_gmapping
   #### start rviz ################################################
 
   <node pkg="rviz" type="rviz" name="rviz" 
-    args="-d $(find laser_scan_matcher)/demo/demo_gmapping.rviz"/>
+    args="-d $(find laser_scan_matcher)/demo/deepracer_gmapping.rviz"/>
+  
 
   #### start the laser scan_matcher ##############################
 
@@ -29,6 +34,8 @@ slam_gmapping
 
     <param name="fixed_frame" value = "odom"/>
     <param name="max_iterations" value="10"/>
+    <param name="use_imu" value="true"/>
+
 
   </node>
 
